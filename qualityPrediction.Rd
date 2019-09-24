@@ -34,7 +34,7 @@ for(column in str_subset(names(test),"indicator"))
 test_nextfill = test %>% mutate_all(funs(na.locf(.,na.rm=F,fromLast=T)))
 
 ## creating a smaller training dataset keeping only rows where the water
-quality is not NA
+## quality is not NA
 train_small = train[!is.na(train$waterQuality),]
 
 
@@ -150,8 +150,7 @@ for(i in 1:niter)
 err = err[-1]
 hist(err)
 
-## Do a series of randomForests by each time removing the n least
-   important indicators (1<=n<=18) and calculating the median rmse over 10 iterations
+## Do a series of randomForests by each time removing the n least important indicators (1<=n<=18) and calculating the median rmse over 10 iterations
 
 err2 = NA
 t = Sys.time()
