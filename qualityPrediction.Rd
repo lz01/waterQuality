@@ -172,6 +172,7 @@ for(i in c(1,10,12,14,18))
 
 err2 = err2[-1]
 
+Sys.time()-t
 
 	    
 
